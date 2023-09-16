@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 a,
 a:hover {
     text-decoration: none !important;
@@ -28,6 +32,24 @@ h6 {
 
 main .img-home {
     max-width: 14vw;
+}
+a.btn.file {
+    border-style: dashed;
+}
+.file .btn_m {
+    position: relative;
+    overflow: hidden;
+    height: 75px;
+}
+
+.file .btn_m i {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+a.btn.file:hover .btn_c {
+	transform: translateY(-75px);
 }
 
 #sticky-header .logo {
@@ -92,6 +114,10 @@ footer .col-12 {
     margin-bottom: unset;
 }
 
+.scroll-top {
+    left: 30px;
+}
+
 @media only screen and (max-width: 1500px) {
     main .img-home {
         max-width: 18vw;
@@ -112,4 +138,136 @@ footer .col-12 {
     main .img-home {
         max-width: 45vw;
     }
+}
+
+ /* Estilos para el botón flotante de WhatsApp */
+ .whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    animation: slide-up 0.5s ease-in-out;
+}
+
+.whatsapp-button i {
+    font-size: 30px;
+    color: #fff;
+}
+
+/* Estilo para el botón flotante de WhatsApp */
+#whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    z-index: 1000;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+/* Estilo del botón de WhatsApp al pasar el cursor sobre él (hover) */
+#whatsapp-button:hover {
+    background-color: darkgreen; 
+}
+
+#whatsapp-button i {
+    font-size: 30px;
+    color: #fff;
+}
+
+/* Estilos para el tooltip de WhatsApp */
+#whatsapp-tooltip {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1001;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+
+#whatsapp-tooltip h4 {
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#whatsapp-message {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#whatsapp-send {
+    background-color: #25d366;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    float: right; 
+    transition: background-color 0.3s ease; 
+    border: none;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: .3s ease-in-out;
+}
+
+#whatsapp-send:hover {
+    background-color: darkgreen; 
+}
+
+#preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid var(--tg-primary-color);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spinloader 2s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader img{
+    height: 80px;
+    width: 80px;
+    animation: spinlogo 2s linear infinite;
+}
+@keyframes spinloader {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes spinlogo {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
 }

@@ -1,0 +1,82 @@
+svg {
+    max-width: 100% !important;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+}
+
+.lote-path:hover {
+    fill: #426D3799;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.lote-path[disponible="No"]:hover {
+    fill: #ff6d3d99 !important;
+}
+
+svg {
+    fill: #ffffff00;
+}
+
+.loteTooltip {
+    pointer-events: none;
+    position: absolute;
+    font-size: 18px;
+    text-align: center;
+    background: #ffffffdd;
+    padding: 10px 15px;
+    z-index: 5;
+    height: auto;
+    width: auto;
+    line-height: 30px;
+    margin: 0 auto;
+    color: #21669e;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px #eee;
+    transform: translateX(-50%) translateY(-75%) ;
+    display: none;
+}
+
+.loteTooltip.active {
+    display: block;
+}
+
+.loteTooltip:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 0;
+    margin-left: -10px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #ffffffdd;
+}
+.lote {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--tg-heading-font-color);
+    margin-top: 10px;
+    margin-bottom: 2px;
+    line-height: 1;
+}
+.superficie {
+    font-size: 14px;
+    color: var(--tg-heading-font-color);
+    margin-top: 10px;
+    margin-bottom: 2px;
+    line-height: 1;
+}
+.disponible {
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--tg-green);
+    margin-bottom: 4px;
+}
+.no .disponible {
+    color: #ff6d3d;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Tooltip</title>
+    <style>
+        #tooltip {
+            display: none;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <circle id="circle1" cx="50" cy="50" r="20" fill="blue" />
+        <circle id="circle2" cx="100" cy="100" r="20" fill="red" />
+        <circle id="circle3" cx="150" cy="150" r="20" fill="green" />
+    </svg>
+    <div id="tooltip"></div>
+
+    <script>
+        const tooltip = document.getElementById("tooltip");
+        const circles = document.querySelectorAll("circle");
+
+        circles.forEach(circle => {
+            circle.addEventListener("mouseover", (e) => {
+                const id = e.target.getAttribute("id");
+                const name = "Elemento " + id.slice(-1); // Nombre basado en el ID
+                const description = "Descripción del " + name; // Descripción personalizada
+
+                tooltip.style.display = "block";
+                tooltip.style.left = e.clientX + 10 + "px";
+                tooltip.style.top = e.clientY + 10 + "px";
+                tooltip.innerHTML = `
+                    <strong>${name}</strong><br>
+                    ${description}<br>
+                    Nro de ID: ${id}
+                `;
+            });
+
+            circle.addEventListener("mouseout", () => {
+                tooltip.style.display = "none";
+            });
+        });
+    </script>
+</body>
+
+</html>

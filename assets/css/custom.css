@@ -73,8 +73,12 @@ header .nav-logo img {
     height: 70px
 }
 
-footer .col-6 {
+footer div[class^="col-"] {
     text-align: center;
+}
+
+.footer-area .container {
+    padding: 0 50px;
 }
 
 .footer-logo img {
@@ -276,4 +280,10 @@ footer .col-6 {
 #masterplan svg {
     background-image: url('../img/masterplan.jpg') !important;
     background-size: cover;
+}
+
+@media only screen and (max-width: 767px) {
+    footer div[class^="col-"]:first-child {
+        margin-bottom: 50px;
+    }
 }

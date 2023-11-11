@@ -73,7 +73,7 @@ header .nav-logo img {
     height: 70px
 }
 
-footer .col-12 {
+footer .col-6 {
     text-align: center;
 }
 
@@ -86,7 +86,9 @@ footer .col-12 {
 }
 
 .footer-bottom {
-    padding: 25px 0;
+    padding: 35px 0 25px;
+    margin-top: 25px;
+    border-top: 1px solid var(--tg-paragraph-color);
 }
 
 .mobile-menu .close-btn {

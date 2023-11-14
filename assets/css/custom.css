@@ -92,7 +92,7 @@ footer div[class^="col-"] {
 .footer-bottom {
     padding: 35px 0 25px;
     margin-top: 25px;
-    border-top: 1px solid var(--tg-paragraph-color);
+    border-top: 1px dotted var(--tg-paragraph-color);
 }
 
 .mobile-menu .close-btn {
@@ -111,6 +111,24 @@ footer div[class^="col-"] {
     background: var(--tg-secondary-background);
 }
 
+.bg-green {
+    background: var(--tg-green);
+}
+
+.bg-green .sub-title,
+.bg-green h2,
+.bg-green p,
+.bg-green .transparent-btn .btn_t1,
+.footer-bg .footer-contact p,
+.footer-bg .footer-contact a {
+    color: #fff !important;
+}
+.bg-green a.transparent-btn {
+    border-color: #fff;
+}
+.bg-green a:hover.transparent-btn {
+    border-color: var(--tg-primary-color);
+}
 .project-item {
     margin-bottom: 24px;
 }
@@ -268,6 +286,7 @@ footer div[class^="col-"] {
     width: 80px;
     animation: spinlogo 2s linear infinite;
 }
+
 @keyframes spinloader {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -286,4 +305,13 @@ footer div[class^="col-"] {
     footer div[class^="col-"]:first-child {
         margin-bottom: 50px;
     }
+}
+
+.footer-widget {
+	margin-bottom: 30px;
+}
+
+body.v2 .footer-bg {
+    background: var(--tg-green);
+    background-image: unset;
 }

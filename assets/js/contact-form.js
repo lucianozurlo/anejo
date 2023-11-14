@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const nombre = encodeURIComponent(nombreInput.value);
         const telefono = encodeURIComponent(telefonoInput.value);
         const mensaje = encodeURIComponent(mensajeInput.value);
-        const url = `https://wa.me/5491165959914?text=Nombre: ${nombre}%0ATeléfono: ${telefono}%0AMensaje: ${mensaje}`;
+        const url = `https://wa.me/5491150153003?text=Nombre: ${nombre}%0ATeléfono: ${telefono}%0AMensaje: ${mensaje}`;
 
         // Abrir WhatsApp en una nueva pestaña con los datos del formulario
         window.open(url, "_blank");

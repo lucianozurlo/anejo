@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     whatsappSend.addEventListener("click", function () {
         const message = encodeURIComponent(whatsappMessage.value);
-        const url = `https://wa.me/5491165959914?text=${message}`;
+        const url = `https://wa.me/5491150153003?text=${message}`;
 
         // Abrir WhatsApp en una nueva pestaña
         window.open(url, "_blank");

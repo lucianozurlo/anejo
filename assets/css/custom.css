@@ -115,6 +115,10 @@ footer div[class^="col-"] {
     background: var(--tg-green);
 }
 
+.bg-green-lite {
+    background: var(--tg-green-lite);
+}
+
 .bg-green .sub-title,
 .bg-green h2,
 .bg-green p,
@@ -140,6 +144,18 @@ footer div[class^="col-"] {
 .scroll-top {
     left: 30px;
 }
+
+.feature-icon {
+	border: 1.5px solid var(--tg-green);
+}
+.feature-icon::before {
+	background: var(--tg-green);
+}
+.features-item:hover .feature-content .title {
+    color: var(--tg-green);
+}
+
+
 
 @media only screen and (max-width: 1500px) {
     main .img-home {
@@ -315,3 +331,5 @@ body.v2 .footer-bg {
     background: var(--tg-green);
     background-image: unset;
 }
+
+
